@@ -5,6 +5,8 @@ var angle := 0.0
 var rotationSpeed := 0.1
 var clockwise := false
 var _launched := false
+var powerChangeRate := 1
+export var maxPower := 500
 
 func rotate_counterclockwise():
 	angle += rotationSpeed
@@ -28,9 +30,10 @@ func _process(_delta):
 	
 	if not _launched:
 		
-		if Input.is_action_pressed("adjustPower"):
-			pass
-		
+		if Input.is_action_pressed("adjustPower") && power <= maxPower:
+			power += powerChangeRate
+		elif power > 0:
+			power -= powerChangeRate
 		
 		if Input.is_action_just_pressed("launch"):
 			var impulse := Vector2(power,0).rotated(deg2rad(-angle))
