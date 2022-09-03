@@ -6,26 +6,31 @@ var rotationSpeed := 0.1
 var clockwise := false
 var _launched := false
 
-func adjustAngle():
-	
-	if clockwise:
-		if angle <= 0.0:
-			clockwise = false
-		else:
-			angle -= rotationSpeed
-	else:
-		if angle >= 89.9:
-			clockwise = true
-		else:
-			angle += rotationSpeed
-	return angle
-	
+func rotate_counterclockwise():
+	angle += rotationSpeed
+	if angle >= 89.9:
+		clockwise = true
 
+func rotate_clockwise():
+	angle -= rotationSpeed
+	if angle <= 0.0:
+		clockwise = false
+
+func adjustAngle():
+	if clockwise:
+		rotate_clockwise()
+	else:
+		rotate_counterclockwise()
+	
 
 
 func _process(_delta):
 	
 	if not _launched:
+		
+		if Input.is_action_pressed("adjustPower"):
+			pass
+		
 		
 		if Input.is_action_just_pressed("launch"):
 			var impulse := Vector2(power,0).rotated(deg2rad(-angle))
