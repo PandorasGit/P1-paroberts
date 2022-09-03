@@ -9,12 +9,12 @@ var _launched := false
 func adjustAngle():
 	
 	if clockwise:
-		if angle <= 0:
+		if angle <= 0.0:
 			clockwise = false
 		else:
 			angle -= rotationSpeed
 	else:
-		if angle >= 90:
+		if angle >= 89.9:
 			clockwise = true
 		else:
 			angle += rotationSpeed

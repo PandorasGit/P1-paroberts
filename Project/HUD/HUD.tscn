@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="TutorialText" type="RichTextLabel" parent="."]
+anchor_right = 0.996
+anchor_bottom = 1.0
+margin_left = 907.0
+margin_top = 1.0
+margin_right = 68.0959
+margin_bottom = -576.0
+theme = SubResource( 1 )
+text = "SpaceBar To Shoot"
