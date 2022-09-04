@@ -7,9 +7,12 @@
 [node name="TutorialText" type="RichTextLabel" parent="."]
 anchor_right = 0.996
 anchor_bottom = 1.0
-margin_left = 907.0
-margin_top = 1.0
-margin_right = 68.0959
-margin_bottom = -576.0
+margin_left = 876.0
+margin_top = -1.0
+margin_right = 37.096
+margin_bottom = -501.0
 theme = SubResource( 1 )
-text = "SpaceBar To Shoot"
+text = "SpaceBar To Shoot
+Hold Enter to increase
+Power. Power falls
+when not charging"
