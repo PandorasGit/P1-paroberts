@@ -7,6 +7,7 @@ var clockwise := false
 var _launched := false
 var powerChangeRate := 1
 export var maxPower := 500
+export var minPower := 100
 
 func rotate_counterclockwise():
 	angle += rotationSpeed
@@ -29,10 +30,10 @@ func adjustAngle():
 func _process(_delta):
 	
 	if not _launched:
-		
+		$PowerMeter.value = -power
 		if Input.is_action_pressed("adjustPower") && power <= maxPower:
 			power += powerChangeRate
-		elif power > 0:
+		elif power > minPower:
 			power -= powerChangeRate
 		
 		if Input.is_action_just_pressed("launch"):
@@ -40,6 +41,7 @@ func _process(_delta):
 			$LauncherSprite/Projectile.gravity_scale = 1
 			$LauncherSprite/Projectile.apply_impulse(Vector2.ZERO, impulse )
 			_launched = true
+			$PowerMeter.value = -minPower
 		adjustAngle()
 		$LauncherSprite.rotation = deg2rad(-angle)
 	
