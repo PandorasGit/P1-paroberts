@@ -1,18 +1,12 @@
-[gd_scene load_steps=2 format=2]
-
-[sub_resource type="Theme" id=1]
+[gd_scene format=2]
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="TutorialText" type="RichTextLabel" parent="."]
-anchor_right = 0.996
-anchor_bottom = 1.0
-margin_left = 876.0
-margin_top = -1.0
-margin_right = 37.096
-margin_bottom = -501.0
-theme = SubResource( 1 )
-text = "SpaceBar To Shoot
-Hold Enter to increase
-Power. Power falls
-when not charging"
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 3.0
+margin_top = 762.0
+margin_right = 195.0
+margin_bottom = 834.0
+text = "Space Bar to Shoot
+Hold Enter to increase power
+Release to Decrease power"
