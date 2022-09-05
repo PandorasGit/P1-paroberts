@@ -4,9 +4,9 @@
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 3.0
-margin_top = 762.0
+margin_top = 498.0
 margin_right = 195.0
-margin_bottom = 834.0
+margin_bottom = 570.0
 text = "Space Bar to Shoot
 Hold Enter to increase power
 Release to Decrease power"

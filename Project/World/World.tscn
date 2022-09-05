@@ -43,7 +43,7 @@ tile_data = PoolIntArray( 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0
 [node name="Launcher" parent="." instance=ExtResource( 1 )]
 position = Vector2( 86, 645 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+[node name="PowerBar" parent="." instance=ExtResource( 3 )]
 
 [node name="Target" parent="." instance=ExtResource( 4 )]
 position = Vector2( 280, 555 )
