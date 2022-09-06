@@ -9,9 +9,11 @@ var powerChangeRate := 1
 export var maxPower := 500
 export var minPower := 100
 
+signal angle_changed(new_angle)
+
 func rotate_counterclockwise():
 	angle += rotationSpeed
-	if angle >= 89.9:
+	if angle >= 90.0:
 		clockwise = true
 
 func rotate_clockwise():
@@ -25,10 +27,11 @@ func adjustAngle():
 	else:
 		rotate_counterclockwise()
 	
+	
 
 
 func _process(_delta):
-	
+	emit_signal("angle_changed", angle)
 	if not _launched:
 		$PowerMeter.value = -power
 		if Input.is_action_pressed("adjustPower") && power <= maxPower:
