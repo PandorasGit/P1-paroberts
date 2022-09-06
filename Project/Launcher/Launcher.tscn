@@ -15,13 +15,3 @@ texture = ExtResource( 1 )
 position = Vector2( 0, -20 )
 rotation = 0.785398
 gravity_scale = 0.0
-
-[node name="PowerMeter" type="VScrollBar" parent="."]
-margin_left = -55.4977
-margin_top = -28.0357
-margin_right = -43.4977
-margin_bottom = 63.9643
-min_value = -500.0
-max_value = -100.0
-value = -100.0
-custom_step = 1.0
