@@ -11,7 +11,7 @@ export var minPower := 100
 
 signal angle_changed(new_angle)
 signal power_changed(new_power)
-
+signal projectile_launched(launched)
 
 
 func adjustAngle():
@@ -43,6 +43,7 @@ func _process(_delta):
 			power -= powerChangeRate
 		
 		if Input.is_action_just_pressed("launch"):
+			emit_signal("projectile_launched")
 			var impulse := Vector2(power,0).rotated(deg2rad(-angle))
 			$LauncherSprite/Projectile.gravity_scale = 1
 			$LauncherSprite/Projectile.apply_impulse(Vector2.ZERO, impulse )
