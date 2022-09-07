@@ -36,7 +36,7 @@ func rotate_clockwise():
 func _process(_delta):
 	
 	if not _launched:
-		emit_signal("power_changed", -power)
+		emit_signal("power_changed", power)
 		if Input.is_action_pressed("adjustPower") && power <= maxPower:
 			power += powerChangeRate
 		elif power > minPower:

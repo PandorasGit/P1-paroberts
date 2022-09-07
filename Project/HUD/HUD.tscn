@@ -27,8 +27,11 @@ margin_bottom = 32.0
 text = "Angle: X"
 
 [node name="PowerMeter" type="VScrollBar" parent="."]
-margin_right = 12.0
-margin_bottom = 784.0
-min_value = -500.0
-max_value = -100.0
-value = -100.0
+margin_left = 13.0
+margin_top = 786.0
+margin_right = 25.0
+margin_bottom = 1572.0
+rect_rotation = 180.0
+min_value = 100.0
+max_value = 500.0
+value = 100.0
