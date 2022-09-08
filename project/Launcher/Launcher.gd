@@ -14,6 +14,7 @@ signal power_changed(new_power)
 signal projectile_launched(launched)
 
 
+
 func adjustAngle():
 	if clockwise:
 		rotate_clockwise()
@@ -33,6 +34,7 @@ func rotate_clockwise():
 	
 
 
+
 func _process(_delta):
 	
 	if not _launched:
@@ -45,11 +47,14 @@ func _process(_delta):
 		if Input.is_action_just_pressed("launch"):
 			emit_signal("projectile_launched")
 			var impulse := Vector2(power,0).rotated(deg2rad(-angle))
-			$LauncherSprite/Projectile.gravity_scale = 1
-			$LauncherSprite/Projectile.apply_impulse(Vector2.ZERO, impulse )
+			
+			var projectile = preload("res://Projectile/Projectile.tscn").instance()
+			add_child(projectile)
+			projectile.launch(impulse)
+			
 			_launched = true
 			emit_signal("power_changed", minPower)
 		adjustAngle()
-		$LauncherSprite.rotation = deg2rad(-angle)
+		rotation = deg2rad(-angle)
 	
 	

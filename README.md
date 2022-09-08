@@ -2,7 +2,7 @@
 # Project 1 AngrySomething 
 - A solution to P1 in CS 315 by Wendall Roberts
 - Made using Godot 3.5, Bosca Ceoil, and Paint.net.
-- Click [HERE](https://bsu-cs315.github.io/P1-waroberts/Builds/Iteration1-Builds/Build01/P1-Iteration1-Build01.html) to run the lastest version.
+- Click [HERE](https://bsu-cs315.github.io/P1-waroberts/) to run the lastest version.
 
 
 ## Third Party Assets
