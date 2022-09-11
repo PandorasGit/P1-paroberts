@@ -26,11 +26,17 @@ margin_right = 434.0
 margin_bottom = 32.0
 text = "Angle: X"
 
-[node name="ProjectilesLeft" type="Label" parent="VBoxContainer"]
+[node name="ProjectilesLeftLabel" type="Label" parent="VBoxContainer"]
 margin_top = 36.0
 margin_right = 434.0
 margin_bottom = 50.0
 text = "Projectiles: X"
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 434.0
+margin_bottom = 68.0
+text = "Score: X"
 
 [node name="PowerMeter" type="VScrollBar" parent="."]
 margin_left = 13.0

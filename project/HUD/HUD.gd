@@ -2,9 +2,21 @@ extends Control
 
 
 var launcher setget _set_launcher
+var targetLayout setget _set_targetMap
 
 var display_angle : String
 
+
+func _set_targetMap(value):
+	targetLayout = value
+	_update_score_label(0)
+	targetLayout.connect("score_changed", self, "_on_score_change")
+
+func _on_score_change(new_score):
+	_update_score_label(new_score)
+	
+func _update_score_label(new_score):
+	$VBoxContainer/ScoreLabel.text = "Score: %d" % new_score
 
 func _set_launcher(value):
 	launcher = value
@@ -36,5 +48,5 @@ func _on_projectile_count_changed(new_count):
 	_update_projectile_count(new_count)
 
 func _update_projectile_count(projectileCount):
-	$VBoxContainer/ProjectilesLeft.text = "Projectiles left: %d" % projectileCount
+	$VBoxContainer/ProjectilesLeftLabel.text = "Projectiles left: %d" % projectileCount
 	

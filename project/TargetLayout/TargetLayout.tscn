@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Target/Target.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TargetLayout/TargetLayout.gd" type="Script" id=3]
+
+[node name="TargetLayout" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Target" parent="." instance=ExtResource( 1 )]
+position = Vector2( 484, 378 )
+sleeping = false
+
+[node name="Target2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 564, 695 )
+sleeping = false
+
+[node name="Target3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 484, 712 )
+sleeping = false
+
+[node name="Target4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 558, 757 )
+sleeping = false
+
+[node name="Target5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 510, 661 )
+sleeping = false
+
+[node name="Target6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 722, 726 )
+sleeping = false
+
+[node name="Target12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 669, 655 )
+sleeping = false
+
+[node name="Target13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 663, 717 )
+sleeping = false
+
+[node name="Target14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 827, 686 )
+sleeping = false
+
+[node name="Target7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 838, 545 )
+sleeping = false
+
+[node name="Target8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 758, 562 )
+sleeping = false
+
+[node name="Target9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 832, 607 )
+sleeping = false
+
+[node name="Target10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 784, 511 )
+sleeping = false
+
+[node name="Target15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 945, 500 )
+sleeping = false
+
+[node name="Target16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 892, 429 )
+sleeping = false
+
+[node name="Target17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 886, 491 )
+sleeping = false
+
+[node name="Target18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 981, 336 )
+sleeping = false
+
+[node name="Target19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1007, 285 )
+sleeping = false
+
+[node name="Target20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 755, 605 )
+sleeping = false
+
+[node name="Target21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 702, 534 )
+sleeping = false
+
+[node name="Target22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 696, 596 )
+sleeping = false
+
+[node name="Target25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 727, 432 )
+sleeping = false
+
+[node name="Target26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 753, 381 )
+sleeping = false
+
+[node name="Target27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 724, 475 )
+sleeping = false
+
+[node name="Target28" parent="." instance=ExtResource( 1 )]
+position = Vector2( 671, 404 )
+sleeping = false
+
+[node name="Target29" parent="." instance=ExtResource( 1 )]
+position = Vector2( 665, 466 )
+sleeping = false
+
+[node name="Target23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 791, 441 )
+sleeping = false
+
+[node name="Target24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 817, 390 )
+sleeping = false
+
+[node name="Target11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 996, 576 )
+sleeping = false
+
+[node name="Target30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 757 )
+sleeping = false
