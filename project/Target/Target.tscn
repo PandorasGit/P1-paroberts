@@ -31,3 +31,7 @@ linear_accel = 50.0
 scale_amount = 8.0
 scale_amount_random = 0.2
 color = Color( 0.545098, 0.109804, 0.109804, 1 )
+
+[node name="DetonationTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true

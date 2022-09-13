@@ -56,3 +56,4 @@ position = Vector2( 86, 837 )
 [node name="SoundPlayer" parent="." instance=ExtResource( 6 )]
 
 [node name="TargetLayout" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, -6 )
