@@ -15,7 +15,7 @@ signal angle_changed(new_angle)
 signal power_changed(new_power)
 signal projectile_count_changed(new_count)
 signal projectile_launched(new_launch)
-
+signal projectiles_depleted()
 
 func adjustAngle():
 	if clockwise:
@@ -66,3 +66,5 @@ func _on_Projectile_sleeping_state_changed():
 	_activeProjectile.queue_free()
 	if projectilesLeft > 0:
 		_launched = false
+	else:
+		emit_signal("projectiles_depleted")

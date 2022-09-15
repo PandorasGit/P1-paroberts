@@ -8,5 +8,5 @@ func _ready():
 
 func _on_StartButton_Pressed():
 	var _ignore = get_tree().change_scene_to(_world)
-
+	queue_free()
 

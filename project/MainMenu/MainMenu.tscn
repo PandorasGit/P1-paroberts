@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1.0
 margin_bottom = -4.0
-text = "ANGRYSOMETHINGIDK"
+text = "WORKING TITLE"
 align = 1
 
 [node name="StartButton" type="Button" parent="."]

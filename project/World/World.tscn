@@ -51,9 +51,11 @@ tile_data = PoolIntArray( 65535, 0, 0, 32, 0, 0, 131071, 0, 0, 65568, 0, 0, 1966
 [node name="Launcher" parent="." instance=ExtResource( 1 )]
 position = Vector2( 86, 837 )
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
-
 [node name="SoundPlayer" parent="." instance=ExtResource( 6 )]
 
 [node name="TargetLayout" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -6 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+margin_right = 0.0
+margin_bottom = 0.0
