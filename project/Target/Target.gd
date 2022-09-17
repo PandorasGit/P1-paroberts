@@ -16,4 +16,19 @@ func _process(_delta):
 func _removeTarget():
 	$DetonationTimer.start()
 	yield($DetonationTimer, "timeout")
-	queue_free()
+	deactivateTarget()
+	
+
+
+func deactivateTarget():
+	$CollisionShape2D.disabled = true
+	$Explosion.emitting = false
+	linear_velocity = Vector2(0,0)
+	angular_velocity = 0
+	visible = false
+	_active = false
+
+
+func enableTargetCollision():
+	$CollisionShape2D.disabled = false
+	visible = true

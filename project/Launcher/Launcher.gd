@@ -2,14 +2,16 @@ extends Node2D
 
 var power := 200
 var angle := 0.0
-var rotationSpeed := 0.1
-var clockwise := false
-var _launched := false
+var _rotationSpeed := 0.1
+var _clockwise := false
+var _launched := true
 var _activeProjectile
+var projectilesLeft := 3
 var _powerChangeRate := 1
 export var maxPower := 500
 export var minPower := 100
-export var projectilesLeft := 3
+export var maxProjectiles := 3
+
 
 signal angle_changed(new_angle)
 signal power_changed(new_power)
@@ -18,7 +20,7 @@ signal projectile_launched(new_launch)
 signal projectiles_depleted()
 
 func adjustAngle():
-	if clockwise:
+	if _clockwise:
 		rotate_clockwise()
 	else:
 		rotate_counterclockwise()
@@ -26,19 +28,22 @@ func adjustAngle():
 
 
 func rotate_counterclockwise():
-	angle += rotationSpeed
+	angle += _rotationSpeed
 	if angle >= 90.0:
-		clockwise = true
+		_clockwise = true
 
 
 func rotate_clockwise():
-	angle -= rotationSpeed
+	angle -= _rotationSpeed
 	if angle <= 0.0:
-		clockwise = false
+		_clockwise = false
 
+
+func _ready():
+	_replenishProjectiles()
 
 func _process(_delta):
-	
+
 	if not _launched:
 		emit_signal("power_changed", power)
 		if Input.is_action_pressed("adjustPower") && power <= maxPower:
@@ -68,3 +73,13 @@ func _on_Projectile_sleeping_state_changed():
 		_launched = false
 	else:
 		emit_signal("projectiles_depleted")
+
+
+func _replenishProjectiles():
+	projectilesLeft = maxProjectiles
+
+
+func resetLauncher():
+	_replenishProjectiles()
+	angle = 0
+	_launched = false

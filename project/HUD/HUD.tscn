@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://HUD/black_background.png" type="Texture" id=2]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
@@ -55,3 +56,31 @@ rect_rotation = 180.0
 min_value = 100.0
 max_value = 500.0
 value = 100.0
+
+[node name="MainMenu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="MainMenu"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="MainMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 875.0
+margin_top = 214.0
+margin_right = 977.0
+margin_bottom = 228.0
+text = "WORKING TITLE"
+align = 1
+
+[node name="StartButton" type="Button" parent="MainMenu"]
+anchor_right = 47.95
+anchor_bottom = 26.95
+margin_left = 669.0
+margin_top = 423.0
+margin_right = -661.0
+margin_bottom = -501.0
+text = "PUSH TO START"
+icon_align = 1

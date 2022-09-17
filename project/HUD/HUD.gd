@@ -6,8 +6,14 @@ var targetLayout setget _set_targetMap
 
 var display_angle : String
 
-signal reset_World()
+signal world_Reset_Initiated()
+signal game_Start_Initiated()
 
+func _ready():
+# warning-ignore:return_value_discarded
+	$MainMenu/StartButton.connect("pressed", self, "_on_StartButton_Pressed")
+# warning-ignore:return_value_discarded
+	$ResetButton.connect("pressed", self, "_on_ResetButton_Pressed")
 
 func _set_targetMap(value):
 	targetLayout = value
@@ -21,7 +27,7 @@ func _update_score_label(new_score):
 	$VBoxContainer/ScoreLabel.text = "Score: %d" % new_score
 
 func _set_launcher(value):
-	var _ignore = $ResetButton.connect("pressed", self, "_on_ResetButton_Pressed")
+	
 	
 	launcher = value
 	_update_angle_label(launcher.angle)
@@ -66,4 +72,12 @@ func _on_projectiles_depleted():
 
 
 func _on_ResetButton_Pressed():
-	emit_signal("reset_World")
+	$ResetButton.visible = false
+	$MainMenu.visible = true
+	emit_signal("world_Reset_Initiated")
+
+
+
+func _on_StartButton_Pressed():
+	$MainMenu.visible = false
+	emit_signal("game_Start_Initiated")

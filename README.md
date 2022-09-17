@@ -41,9 +41,9 @@
 - [ ] B-2: Earn one star.
 - [X] A-1: Generate neither warnings nor errors at runtime.
 - [ ] A-2: Earn three stars.
-- [ ] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
+- [x] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
 - [ ] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
-- [ ] ⭐ The source code complies with our adopted style guide.
+- [ ] ⭐ The source code complies with [the GDScript guidlines](https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/).
 
 
 ***

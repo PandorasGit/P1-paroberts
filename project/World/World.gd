@@ -6,9 +6,14 @@ func _ready():
 	$HUD.launcher = $Launcher
 	$HUD.targetLayout = $TargetLayout
 	$SoundPlayer.launcher = $Launcher
-	var _ignore = $HUD.connect("reset_World", self, "_on_World_Reset")
+# warning-ignore:return_value_discarded
+	$HUD.connect("world_Reset_Initiated", self, "_on_World_Reset")
+# warning-ignore:return_value_discarded
+	$HUD.connect("game_Start_Initiated", self, "_on_Game_Start")
 
 func _on_World_Reset():
-	print("hello")
-	var _ignore = get_tree().change_scene_to(_mainMenu)
-	queue_free()
+	$TargetLayout.resetTargetLayout()
+
+
+func _on_Game_Start():
+		$Launcher.resetLauncher()
