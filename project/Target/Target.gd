@@ -1,34 +1,40 @@
 extends RigidBody2D
 
-var _active := false
-signal activated()
+
+signal activated
 
 
-func _process(_delta):
+var _is_active := false
 
-	
-	if linear_velocity != Vector2(0,0) and not _active:
-		_active = true
+
+func _process(_delta: float) -> void:
+	if linear_velocity != Vector2(0,0) and not _is_active:
+		_is_active = true
 		emit_signal("activated")
 		$Explosion.emitting = true
-		_removeTarget()
+		_remove()
 
-func _removeTarget():
+
+func _remove() -> void:
 	$DetonationTimer.start()
 	yield($DetonationTimer, "timeout")
-	deactivateTarget()
-	
+	_freeze()
 
 
-func deactivateTarget():
+func _freeze() -> void:
 	$CollisionShape2D.disabled = true
 	$Explosion.emitting = false
 	linear_velocity = Vector2(0,0)
 	angular_velocity = 0
 	visible = false
-	_active = false
+	_is_active = false
 
 
-func enableTargetCollision():
+func _enable_collision() -> void:
 	$CollisionShape2D.disabled = false
 	visible = true
+
+
+func deactivate() -> void:
+	_freeze()
+	_enable_collision()

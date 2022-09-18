@@ -1,18 +1,19 @@
 extends Node2D
 
 
-func _ready():
+func _ready() -> void:
 	$HUD.launcher = $Launcher
-	$HUD.targetLayout = $TargetLayout
+	$HUD.target_layout = $TargetLayout
 	$SoundPlayer.launcher = $Launcher
 # warning-ignore:return_value_discarded
-	$HUD.connect("world_Reset_Initiated", self, "_on_World_Reset")
+	$HUD.connect("restored", self, "_on_HUD_restored")
 # warning-ignore:return_value_discarded
-	$HUD.connect("game_Start_Initiated", self, "_on_Game_Start")
-
-func _on_World_Reset():
-	$TargetLayout.resetTargetLayout()
+	$HUD.connect("game_started", self, "_on_game_started")
 
 
-func _on_Game_Start():
+func _on_HUD_restored() -> void:
+	$TargetLayout.reset_layout()
+
+
+func _on_game_started() -> void:
 		$Launcher.resetLauncher()
