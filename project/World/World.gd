@@ -1,6 +1,5 @@
 extends Node2D
 
-var _mainMenu = load("res://MainMenu/MainMenu.tscn")
 
 func _ready():
 	$HUD.launcher = $Launcher

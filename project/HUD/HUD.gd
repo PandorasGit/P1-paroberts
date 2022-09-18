@@ -15,6 +15,8 @@ func _ready():
 # warning-ignore:return_value_discarded
 	$ResetButton.connect("pressed", self, "_on_ResetButton_Pressed")
 
+
+
 func _set_targetMap(value):
 	targetLayout = value
 	_update_score_label(0)
@@ -75,6 +77,7 @@ func _on_ResetButton_Pressed():
 	$ResetButton.visible = false
 	$MainMenu.visible = true
 	emit_signal("world_Reset_Initiated")
+	
 
 
 

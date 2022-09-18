@@ -1,7 +1,143 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/black_background.png" type="Texture" id=2]
+[ext_resource path="res://HUD/ChakraPetch-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 86
+outline_size = 4
+outline_color = Color( 0.717647, 0.0431373, 0.0431373, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 76
+outline_size = 4
+outline_color = Color( 0.345098, 0.227451, 0.227451, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+step = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("StartButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 730, 1101 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "StartButtonAnimation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("StartButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1.8, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 730, 1101 ), Vector2( 669, 360 ), Vector2( 673, 443 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "TitleTextAnimation"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 2.4, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -5.0, 5.0, -5.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StartButton:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 730, 1101 ), Vector2( 685, 571 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -5.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StartButton:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 730, 1101 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "StartButtonAnimation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("StartButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1.8, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 730, 1101 ), Vector2( 669, 360 ), Vector2( 673, 443 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "TitleTextAnimation"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 2.4, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -5.0, 5.0, -5.0 ]
+}
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
@@ -68,19 +204,39 @@ texture = ExtResource( 2 )
 [node name="Title" type="Label" parent="MainMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 875.0
-margin_top = 214.0
-margin_right = 977.0
-margin_bottom = 228.0
+margin_left = 653.0
+margin_top = 262.0
+margin_right = 1225.0
+margin_bottom = 335.0
+rect_rotation = -5.0
+rect_pivot_offset = Vector2( 306, 56.5 )
+custom_fonts/font = SubResource( 1 )
 text = "WORKING TITLE"
 align = 1
 
 [node name="StartButton" type="Button" parent="MainMenu"]
 anchor_right = 47.95
 anchor_bottom = 26.95
-margin_left = 669.0
-margin_top = 423.0
-margin_right = -661.0
-margin_bottom = -501.0
+margin_left = 730.0
+margin_top = 1101.0
+margin_right = -599.999
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 4 )
 text = "PUSH TO START"
 icon_align = 1
+
+[node name="AnimationPlayers" type="Node" parent="."]
+
+[node name="StartButtonAnimationPlayer" type="AnimationPlayer" parent="AnimationPlayers"]
+root_node = NodePath("../../MainMenu")
+autoplay = "StartButtonAnimation"
+anims/RESET = SubResource( 6 )
+anims/StartButtonAnimation = SubResource( 7 )
+anims/TitleTextAnimation = SubResource( 8 )
+
+[node name="TitleAnimationPlayer" type="AnimationPlayer" parent="AnimationPlayers"]
+root_node = NodePath("../../MainMenu")
+autoplay = "TitleTextAnimation"
+anims/RESET = SubResource( 3 )
+anims/StartButtonAnimation = SubResource( 5 )
+anims/TitleTextAnimation = SubResource( 2 )
