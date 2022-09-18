@@ -15,7 +15,7 @@
 
 - bomb.png from [Kenney's Platformer Pack Redux](https://www.kenney.nl/assets/platformer-pack-redux) liscened under [CC0 1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/)
 
-
+- [Chakra Petch](https://fonts.google.com/specimen/Chakra+Petch?query=Chakra+Petch) from Google Fonts Licensed under [OFL](licenses/OFL.txt).
 
 ***
 # Project Reports
@@ -38,12 +38,12 @@
 - [X] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game.
 - [X] C-5: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
 - [ ] B-1: The project report is complete.
-- [ ] B-2: Earn one star.
+- [X] B-2: Earn one star.
 - [X] A-1: Generate neither warnings nor errors at runtime.
-- [ ] A-2: Earn three stars.
+- [X] A-2: Earn three stars.
 - [x] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
-- [ ] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
-- [ ] ⭐ The source code complies with [the GDScript guidlines](https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/).
+- [X] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
+- [X] ⭐ The source code complies with [the GDScript guidlines](https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/).
 
 
 ***
