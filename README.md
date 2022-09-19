@@ -41,3 +41,5 @@
 - [x] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
 - [X] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
 - [X] ⭐ The source code complies with [the GDScript guidlines](https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/).
+
+Therefore this work merits an A.
